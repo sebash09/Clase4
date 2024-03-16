@@ -1,11 +1,3 @@
-<?php
-include("accesoBD.php");
-
-$accesoBD = new accesoBD();
-$query = $accesoBD->leerDatos(); // Cambiado para usar el método leerDatos
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +30,7 @@ $query = $accesoBD->leerDatos(); // Cambiado para usar el método leerDatos
     <table>
         <tr>
             <th>ID</th>
+            <th>ID Device</th>
             <th>Value</th>
             <th>Type</th>
             <th>Date</th>
@@ -47,17 +40,16 @@ $query = $accesoBD->leerDatos(); // Cambiado para usar el método leerDatos
             foreach ($query->things as $row) {
                 echo "<tr>
                     <td>{$row['id']}</td>
+                    <td>{$row['id_device']}</td> <!-- Agregado para mostrar id_device -->
                     <td>{$row['valor']}</td>
                     <td>{$row['tipo']}</td>
                     <td>{$row['fecha']}</td>
                 </tr>";
             }
         } else {
-            echo "<tr><td colspan='4'>No se encontraron datos</td></tr>";
+            echo "<tr><td colspan='5'>No se encontraron datos</td></tr>";
         }
         ?>
     </table>
 </body>
 </html>
-
-
