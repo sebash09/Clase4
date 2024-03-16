@@ -40,7 +40,7 @@
             foreach ($query->things as $row) {
                 echo "<tr>
                     <td>{$row['id']}</td>
-                    <td>{$row['id_device']}</td> <!-- Agregado para mostrar id_device -->
+                    <td>{$row['id_device']}</td>
                     <td>{$row['valor']}</td>
                     <td>{$row['tipo']}</td>
                     <td>{$row['fecha']}</td>
@@ -53,3 +53,4 @@
     </table>
 </body>
 </html>
+
